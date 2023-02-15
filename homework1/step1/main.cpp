@@ -9,19 +9,19 @@ int main(int argc, char **argv)
 
   double lc = 0.03;
   double pi = 3.14159;
-  double r = 0.3;//маленький радиус 1
-  double R = 0.6;//большой радиус
-  double t = 0.2; //маленький радиус 2
+  double r = 0.3;//Г¬Г Г«ГҐГ­ГјГЄГЁГ© Г°Г Г¤ГЁГіГ± 1
+  double R = 0.6;//ГЎГ®Г«ГјГёГ®Г© Г°Г Г¤ГЁГіГ±
+  double t = 0.2; //Г¬Г Г«ГҐГ­ГјГЄГЁГ© Г°Г Г¤ГЁГіГ± 2
 
   gmsh::model::occ::addPoint( R,  0,  0, lc, 1);
 
-  //точки большего круга
+  //ГІГ®Г·ГЄГЁ ГЎГ®Г«ГјГёГҐГЈГ® ГЄГ°ГіГЈГ 
   gmsh::model::occ::addPoint( r + R,  0,  0, lc, 2);
   gmsh::model::occ::addPoint( R , r ,  0, lc, 3);
   gmsh::model::occ::addPoint( R - r,  0,  0, lc, 4);
   gmsh::model::occ::addPoint(  R , -r ,  0, lc, 5);
 
-  //точки меньшего круга
+  //ГІГ®Г·ГЄГЁ Г¬ГҐГ­ГјГёГҐГЈГ® ГЄГ°ГіГЈГ 
   gmsh::model::occ::addPoint( t + R,  0,  0, lc, 12);
   gmsh::model::occ::addPoint( R , t ,  0, lc, 13);
   gmsh::model::occ::addPoint( R - t,  0,  0, lc, 14);
