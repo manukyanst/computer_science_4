@@ -6,7 +6,7 @@ int main(int argc, char **argv)
 {
   gmsh::initialize();
 
-  gmsh::model::add("ex_2");
+  gmsh::model::add("dog");
 
   // Let's merge an STL mesh that we would like to remesh (from the parent
   // directory):
@@ -65,7 +65,7 @@ int main(int argc, char **argv)
 
   gmsh::model::mesh::generate(3);
 
-  gmsh::write("ex_2.msh");
+  gmsh::write("dog.msh");
 
   // Launch the GUI to see the results:
   std::set<std::string> args(argv, argv + argc);
